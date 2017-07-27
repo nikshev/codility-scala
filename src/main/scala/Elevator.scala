@@ -13,7 +13,7 @@ object Elevator {
     * @return total stops
     */
   def solution(a: Array[Int], b: Array[Int], m: Int, x: Int, y: Int): Int = {
-    var liftStops:Int = 0
+    var elevatorStops:Int = 0
     var totalWeight:Int =0
     var maxPersons:Int =0
     var floors:List[Int] = List()
@@ -33,7 +33,7 @@ object Elevator {
       }
 
       if (elevatorMove) {
-        liftStops += floors.length+1
+        elevatorStops += floors.length+1
         floors = List()
         maxPersons = 0
         totalWeight = 0
@@ -41,6 +41,6 @@ object Elevator {
       }
     }
 
-    liftStops
+    elevatorStops
   }
 }
